@@ -1,10 +1,14 @@
 import ImageGalleryItem from './ImageGalleryItem';
 
-const ImageGallery = ({ children }) => {
+const ImageGallery = ({ children, onShowModal }) => {
   return (
     <ul className="ImageGallery">
-      {children.map(({ previewURL, id }) => (
-        <ImageGalleryItem key={id} previewURL={previewURL} />
+      {children.map((image, index) => (
+        <ImageGalleryItem
+          key={index}
+          imageData={image}
+          onShowModal={onShowModal}
+        />
       ))}
     </ul>
   );

@@ -44,5 +44,6 @@
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "prop-types": "^15.7.2"
-  }
+  },
+  "homepage": "https://oleksiimaistriuk.github.io/goit-react-hw-03-image-finder"
 }

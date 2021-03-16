@@ -1,12 +1,12 @@
 import { useState } from 'react';
-
-const SearchBar = ({ onSubmit }) => {
+import PropTypes from 'prop-types';
+const SearchBar = ({ onFormSubmit }) => {
   const [value, setValue] = useState('');
 
   const handleSabmit = e => {
     e.preventDefault();
 
-    onSubmit(value);
+    onFormSubmit(value);
     setValue('');
   };
 
@@ -15,7 +15,7 @@ const SearchBar = ({ onSubmit }) => {
   };
 
   return (
-    <header>
+    <header className="Searchbar">
       <form className="SearchForm" onSubmit={handleSabmit}>
         <button type="submit" className="SearchForm-button">
           <span className="SearchForm-button-label">Search</span>
@@ -36,3 +36,7 @@ const SearchBar = ({ onSubmit }) => {
 };
 
 export default SearchBar;
+
+// SearchBar.propTypes = {
+//   onFormSubmit: PropTypes.func.isRequired,
+// };
